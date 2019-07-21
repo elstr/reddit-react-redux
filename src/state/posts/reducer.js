@@ -1,8 +1,8 @@
-import { LOAD_POSTS, DISMISS_POST} from './actions'
-
+import { LOAD_POSTS, READ_POST, DISMISS_POST } from './actions'
+import { setPostRead, patchPosts, dismissPost } from '../../utils/helpers'
 const initialState = {
   list: {},
-  showDetail: false
+  selectedPostId: null
 }
 
 export const posts = (state = initialState, action) => {
@@ -12,8 +12,19 @@ export const posts = (state = initialState, action) => {
         ...state,
         list: action.payload.posts
       }
+    case READ_POST:
+      return {
+        list: patchPosts(
+          state.list,
+          setPostRead(state.list[action.payload.postId])
+        ),
+        selectedPostId: action.payload.postId
+      }
     case DISMISS_POST:
-      return state
+      return {
+        ...state,
+        list: dismissPost(state.list, action.payload.postId)
+      }
     default:
       return state
   }

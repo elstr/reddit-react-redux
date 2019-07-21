@@ -1,4 +1,5 @@
 export const LOAD_POSTS = 'LOAD_POSTS'
+export const READ_POST = 'READ_POST'
 export const DISMISS_POST = 'DISMISS_POST'
 
 export function loadPosts(posts) {
@@ -6,6 +7,14 @@ export function loadPosts(posts) {
     type: LOAD_POSTS,
     payload: {
       posts
+    }
+  }
+}
+export function readPost(id) {
+  return {
+    type: READ_POST,
+    payload: {
+      postId: id
     }
   }
 }
