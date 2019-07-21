@@ -7,3 +7,16 @@
   min-width: 30%;
   min-height: 100vh;
 }
+
+.list-container-button__dismiss-all {
+  background: black;
+  border: none;
+  bottom: 0;
+  color: rgb(221, 142, 63);
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  padding: 20px 0;
+  position: fixed;
+  width: 30%;
+}

@@ -1,6 +1,7 @@
 export const LOAD_POSTS = 'LOAD_POSTS'
 export const READ_POST = 'READ_POST'
 export const DISMISS_POST = 'DISMISS_POST'
+export const DISMISS_ALL = 'DISMISS_ALL'
 
 export function loadPosts(posts) {
   return {
@@ -24,5 +25,10 @@ export function dismissPost(postId) {
     payload: {
       postId: postId
     }
+  }
+}
+export function dismissAll() {
+  return {
+    type: DISMISS_ALL,
   }
 }
