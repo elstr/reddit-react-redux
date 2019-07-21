@@ -1,0 +1,9 @@
+.list-container {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+  min-width: 30%;
+  min-height: 100vh;
+}
