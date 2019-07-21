@@ -6,6 +6,8 @@ import { createStore, compose } from 'redux'
 import { Provider } from 'react-redux'
 import reducer from './state'
 
+import './index.css'
+
 const middlewares = []
 
 if (window.devToolsExtension) {
