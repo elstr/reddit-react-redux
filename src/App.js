@@ -3,7 +3,7 @@ import DATA from './data/top.json'
 import { connect } from 'react-redux'
 import { loadPosts } from './state/posts/actions'
 import { formatPosts } from './utils/helpers'
-import List from './components/List'
+import { List, Detail } from './components'
 import './App.css'
 
 class App extends Component {
@@ -12,7 +12,12 @@ class App extends Component {
     this.props.loadPosts(posts)
   }
   render() {
-    return <List />
+    return (
+      <div className='wrapper'>
+        <List />
+        <Detail />
+      </div>
+    )
   }
 }
 

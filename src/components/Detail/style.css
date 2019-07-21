@@ -1,0 +1,10 @@
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 100%
+}
+.detail-image {
+  align-self: center;
+  margin: 20px 0;
+}
