@@ -6,16 +6,39 @@ import './style.css'
 
 class List extends Component {
   handleRead = id => this.props.readPost(id)
-  handleDismiss = id => this.props.dismissPost(id)
+  handleDismiss = id => {
+    document.getElementById(`card-${id}`).classList.add('dismiss')
+    setTimeout(() => {
+      this.props.dismissPost(id)
+    }, 300)
+  }
   handleDismissAll = () => this.props.dismissAll()
+
   render() {
     const { posts } = this.props
+    const keyPosts = Object.keys(posts)
     return (
       <div className='list-container'>
-        {Object.keys(posts).map(k => (
-          <Card key={posts[k].id} post={posts[k]} handleRead={this.handleRead} handleDismiss={this.handleDismiss} />
-        ))}
-        <button className='list-container-button__dismiss-all' onClick={this.handleDismissAll}>
+        {keyPosts.length ? (
+          keyPosts.map(k => {
+            const { id } = posts[k]
+            return (
+              <div key={id} id={`card-${id}`}>
+                <Card
+                  post={posts[k]}
+                  handleRead={this.handleRead}
+                  handleDismiss={this.handleDismiss}
+                />
+              </div>
+            )
+          })
+        ) : (
+          <h3 className='list-container__empty-text'>Reddit Posts</h3>
+        )}
+        <button
+          className='list-container-button__dismiss-all'
+          onClick={this.handleDismissAll}
+        >
           Dismiss All
         </button>
       </div>

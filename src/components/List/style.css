@@ -20,3 +20,26 @@
   position: fixed;
   width: 30%;
 }
+
+.list-container__empty-text{
+  text-align: center;
+}
+
+.dismiss {
+  -webkit-animation: dismiss 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation: dismiss 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes dismiss {
+  0% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  100% {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+}

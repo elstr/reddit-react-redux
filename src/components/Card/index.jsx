@@ -25,10 +25,16 @@ const Card = ({ post, handleRead, handleDismiss }) => (
           {post.title}
         </p>
       </div>
-      <span className='card-content__arrow' onClick={() => handleRead(post.id)} />
+      <span
+        className='card-content__arrow'
+        onClick={() => handleRead(post.id)}
+      />
     </div>
     <div className='card-footer'>
-      <div className='card-footer-container__dismiss' onClick={() => handleDismiss(post.id)}>
+      <div
+        className='card-footer-container__dismiss'
+        onClick={() => handleDismiss(post.id)}
+      >
         <span className='card-footer-button__dismiss' />
         <span>Dismiss post</span>
       </div>
