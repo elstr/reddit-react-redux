@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/reddit-react-redux/static/css/main.89f3a131.chunk.css",
+    "main.js": "/reddit-react-redux/static/js/main.45713973.chunk.js",
+    "main.js.map": "/reddit-react-redux/static/js/main.45713973.chunk.js.map",
+    "runtime~main.js": "/reddit-react-redux/static/js/runtime~main.2ad48622.js",
+    "runtime~main.js.map": "/reddit-react-redux/static/js/runtime~main.2ad48622.js.map",
+    "static/js/2.61f68910.chunk.js": "/reddit-react-redux/static/js/2.61f68910.chunk.js",
+    "static/js/2.61f68910.chunk.js.map": "/reddit-react-redux/static/js/2.61f68910.chunk.js.map",
+    "index.html": "/reddit-react-redux/index.html",
+    "precache-manifest.930ab69a2727440273636851713b62b6.js": "/reddit-react-redux/precache-manifest.930ab69a2727440273636851713b62b6.js",
+    "service-worker.js": "/reddit-react-redux/service-worker.js",
+    "static/css/main.89f3a131.chunk.css.map": "/reddit-react-redux/static/css/main.89f3a131.chunk.css.map",
+    "static/media/style.css": "/reddit-react-redux/static/media/right-arrow.b25e09b1.svg"
+  }
+}
