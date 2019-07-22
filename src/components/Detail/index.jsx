@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { clearDetail } from '../../state/posts/actions'
 import './style.css'
 
 class Detail extends Component {
   render() {
-    const { post } = this.props
+    const { post, showDetail, isMobile, clearDetail } = this.props
     return (
       <div className='detail-container'>
-        {post && (
+        {post && showDetail && (
           <>
+            {isMobile && (
+              <span
+                className='detail-button__back'
+                onClick={() => clearDetail()}
+              />
+            )}
             <h2>{post.author}</h2>
             {post.thumbnail && (
               <img className='detail-image' src={post.thumbnail} />
@@ -21,8 +28,18 @@ class Detail extends Component {
   }
 }
 
-const mapStateToProps = ({ posts: { list, selectedPostId } }) => ({
-  post: list[selectedPostId]
+const mapStateToProps = ({
+  posts: { list, selectedPostId, showDetail },
+  navigation: { isMobile }
+}) => ({
+  post: list[selectedPostId],
+  showDetail,
+  isMobile
 })
-
-export default connect(mapStateToProps)(Detail)
+const mapDispatchToProps = dispatch => ({
+  clearDetail: () => dispatch(clearDetail())
+})
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Detail)

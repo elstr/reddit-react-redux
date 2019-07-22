@@ -2,6 +2,7 @@ export const LOAD_POSTS = 'LOAD_POSTS'
 export const READ_POST = 'READ_POST'
 export const DISMISS_POST = 'DISMISS_POST'
 export const DISMISS_ALL = 'DISMISS_ALL'
+export const CLEAR_DETAIL = 'CLEAR_DETAIL'
 
 export function loadPosts(posts) {
   return {
@@ -30,5 +31,10 @@ export function dismissPost(postId) {
 export function dismissAll() {
   return {
     type: DISMISS_ALL,
+  }
+}
+export function clearDetail() {
+  return {
+    type: CLEAR_DETAIL,
   }
 }

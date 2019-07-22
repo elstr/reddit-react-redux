@@ -8,3 +8,21 @@
   align-self: center;
   margin: 20px 0;
 }
+
+.detail-button__back {
+  border: none;
+  margin: 20px 20px 20px 0;
+  width: 20px;
+  position: relative;
+}
+.detail-button__back:before {
+  content: ' ';
+  background: url('../../assets/left-arrow.svg') no-repeat;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

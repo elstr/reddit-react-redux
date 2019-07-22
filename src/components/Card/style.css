@@ -29,12 +29,13 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  text-align: justify;
+  /* text-align: justify; */
   margin: 3px 0 20px 0;
 }
 .card-content__tumbnail {
   align-items: center;
   display: flex;
+  width: 100%;
 }
 .card-content__title{
   cursor: pointer;
@@ -88,4 +89,18 @@
 
 .no-image {
   margin-right: 30px;
+}
+
+
+/* Ipad */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+  .card-content__tumbnail {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card-content__arrow {
+    display: none;
+  }
 }
